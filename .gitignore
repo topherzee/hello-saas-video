@@ -1,6 +1,6 @@
-apache-tomcat
-downloads
-build
+apache-tomcat/
+downloads/
+build/
 
 .config-env
 
