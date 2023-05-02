@@ -1,3 +1,8 @@
 $type: pagesDeliveryEndpoint_v2
-depth: 5
-includeSystemProperties: true
+referenceDepth: 1
+
+references:
+  - name: imageReference
+    propertyName: image
+    referenceResolver:
+      $type: assetReferenceResolver
