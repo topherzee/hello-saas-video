@@ -8,4 +8,4 @@ add a description here
 
 # Ping docs
 
-When you make an update on this repository, it impacts documentation directly. Plase inform docs about any changes you've made directly in the `#documentation` Slack channel.
+When you make an update on this repository, it impacts documentation directly. Please inform docs about any changes you've made directly in the `#documentation` Slack channel.
