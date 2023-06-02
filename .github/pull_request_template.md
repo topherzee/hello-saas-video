@@ -4,7 +4,7 @@ https://jira.magnolia-cms.com/browse/SAAS-
 
 # Description
 
-<!-- add a description here -->
+add a description here
 
 # Ping docs
 
