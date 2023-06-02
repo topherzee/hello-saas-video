@@ -1,6 +1,6 @@
 # Jira
 
-https://jira.magnolia-cms.com/browse/SAAS-
+https://magnolia-cms.atlassian.net/jira/software/c/projects/SAAS/issues/SAAS-
 
 # Description
 
