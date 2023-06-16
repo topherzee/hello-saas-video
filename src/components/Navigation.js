@@ -1,14 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { getAPIBase, getLanguages, getCurrentLanguage, changeLanguage } from '../helpers/AppHelpers';
+import { getAPIBase } from '../helpers/AppHelpers';
 
 function renderLanguages() {
-  const currentLanguage = getCurrentLanguage();
-
-  return null;
 
   // Languages not yet supported on SaaS.
-
+  // const currentLanguage = getCurrentLanguage();
   // return (
   //   <div className="languages">
   //     {getLanguages().map((lang) => (
@@ -18,6 +15,8 @@ function renderLanguages() {
   //     ))}
   //   </div>
   // );
+
+  return null;
 }
 
 function Navigation() {
