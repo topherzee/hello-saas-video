@@ -1,9 +1,8 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { getAPIBase } from '../helpers/AppHelpers';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { getAPIBase } from "../helpers/AppHelpers";
 
 function renderLanguages() {
-
   // Languages not yet supported on SaaS.
   // const currentLanguage = getCurrentLanguage();
   // return (
@@ -26,7 +25,10 @@ function Navigation() {
     async function fetchNav() {
       const apiBase = getAPIBase();
 
-      const baseUrl = apiBase + process.env.REACT_APP_MGNL_API_NAV + process.env.REACT_APP_MGNL_APP_BASE;
+      const baseUrl =
+        apiBase +
+        process.env.REACT_APP_MGNL_API_NAV +
+        process.env.REACT_APP_MGNL_APP_BASE;
       const url = `${baseUrl}?subid_token=${process.env.REACT_APP_MGNL_SUB_ID}`;
       const subUrl = `${baseUrl}@nodes?subid_token=${process.env.REACT_APP_MGNL_SUB_ID}`;
 
@@ -36,7 +38,9 @@ function Navigation() {
       const subRes = await fetch(subUrl);
       const childNodesData = await subRes.json();
       // JCR returns an array, but Norsu returns object with more info
-      const childNodes = childNodesData.results ? childNodesData.results : childNodesData;
+      const childNodes = childNodesData.results
+        ? childNodesData.results
+        : childNodesData;
       setNavItems([data, ...childNodes]);
     }
 
@@ -51,10 +55,10 @@ function Navigation() {
         return (
           <NavLink
             activeClassName="active"
-            key={item['@id']}
-            to={item['@path'].replace(process.env.REACT_APP_MGNL_APP_BASE, '')}
+            key={item["@id"]}
+            to={item["@path"].replace(process.env.REACT_APP_MGNL_APP_BASE, "")}
           >
-            {item.navigationTitle || item.title || item['@name']}
+            {item.navigationTitle || item.name}
           </NavLink>
         );
       })}

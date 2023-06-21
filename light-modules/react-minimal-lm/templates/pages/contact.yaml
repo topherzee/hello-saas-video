@@ -13,5 +13,7 @@ areas:
     availableComponents:
       Paragraph:
         id: spa-lm:components/paragraph
+      Headline:
+        id: spa-lm:components/headline
       Expander:
         id: spa-lm:components/expander
