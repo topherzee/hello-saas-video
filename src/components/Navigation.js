@@ -52,15 +52,24 @@ function Navigation() {
   return navItems ? (
     <nav className="Navigation">
       {navItems.map((item) => {
-        return (
-          <NavLink
-            activeClassName="active"
-            key={item["@id"]}
-            to={item["@path"].replace(process.env.REACT_APP_MGNL_APP_BASE, "")}
-          >
-            {item.navigationTitle || item.name}
-          </NavLink>
-        );
+        // console.log("navItems", navItems);
+        try {
+          return (
+            <NavLink
+              activeClassName="active"
+              key={item["@id"]}
+              to={item["@path"].replace(
+                process.env.REACT_APP_MGNL_APP_BASE,
+                ""
+              )}
+            >
+              {item.navigationTitle || item.name}
+            </NavLink>
+          );
+        } catch (error) {
+          console.log("Problem with navigation. Maybe no pages exist yet.");
+          return null;
+        }
       })}
       {renderLanguages()}
     </nav>
